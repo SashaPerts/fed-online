@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #D6B7B7;
+    font-family: 'Inter', sans-serif;
+}
+.container{
+    width: 360px;
+    margin: 100px auto;
+    border-radius: 20px;
+    background-color: #FFF;
+    padding: 56px 20px 91px 22px;
+}
+/* menu button */
+button{
+    border: none;
+    background-color: #FFF;
+    margin: 0 6px;
+    padding: 0;
+}
+/* elements with 24px left spacing */
+input,.menu-categories,.menu-items {
+    margin-left: 2px;
+}
+input{
+    width: 100%;
+    border-radius: 12px;
+    border: 0;
+    background: #EFEFEF;
+    padding: 15px 15px 14px 15px;
+    font-size: 12px;
+    font-weight: 400;
+}
+/* horisontal menu for item categories */
+.menu-categories{
+    font-size: 0;
+    padding-top: 29px;
+    padding-bottom: 32px;
+}
+/* categories displayed in horizontal menu */
+.category{
+    display: inline-block;
+    text-align: center;
+    font-size: medium;
+    margin-right: 24px;
+    width: 74px;
+}
+.category:last-child{
+    margin-right: 0;
+}
+.category div{
+    border-radius: 12px;
+    height: 74px;
+    line-height: 74px;  /* to apply vertical-align:middle to images*/
+    background: #EFEFEF;
+}
+.category div img{
+    margin: auto;
+    vertical-align: middle;
+}
+.category h4{
+    margin: 8px;
+    color: #C4C4C4;
+}
+/* hover */
+.category:hover div{
+    background-color: #EAE2B7;
+}
+.category:hover h4{
+    color: black;
+}
+/* vertical menu of choosen items */
+.menu-items h2{
+    padding: 0 0 26px 0;
+    margin: 0;
+}
+.item{
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0px #E5E5E5;
+    margin-bottom: 12px;
+    height: 88px;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+.item:last-child{
+    margin-bottom: 0;
+}
+.item div{
+    display: inline-block;
+    box-shadow: none;
+    margin: 22px 0 0 0;
+    padding: 0;
+    vertical-align: top;
+}
+.item div p{
+    margin: 8px 0;
+    padding: 0;
+}
+.item .item-img-container{
+    width: 89px;
+    text-align: center;
+    margin: 0;
+}
+/* The following two selectors and the special form of the properties in the previous one are added because of different height of the image #BigMacImage */
+.item div img{
+    margin-top: 22px;
+}
+#BigMacImage{
+    margin-top: 6px;
+}
+
+.item div p:last-of-type{
+    color: #D62828;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+h1{
+    font-weight: 600;
+    font-size: 32px;
+    padding: 23px 0 17px 0;
+}
+h4{
+    font-size: 15px;
+    font-weight: 500;
+}
