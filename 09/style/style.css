@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    background-color: lightgray;
+    padding: 20px;
+    height: 1250px;
+}
+.innerContainer{
+    width: 1250px;
+    margin: 0 auto;
+    position: relative;
+}
+/* end block */
+.square{
+    width: 512px;
+    height: 512px;
+    position: absolute;
+}
+.square.first{
+    background-color: black;
+    z-index: 1;
+}
+.imageContainer{
+    text-align: center;
+    margin: 128.641px 0 32.48px 0;
+}
+.flagContainer{
+    text-align: center;
+}
+.flagContainer div{
+    display: inline-block;
+    width: 80px;
+    height: 60px;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #2137FC 0%, #2137FB 50%, #FFD84B 50%, #FFD84B 100%);
+}
+/* end block */
+.square.second{
+    background-color: #FFCE22;
+    top: 350px;
+    left: 350px;
+    z-index: 3;
+}
+.square.second div{
+    background-color: blue;
+    margin: 0;
+    height: 250px;
+}
+.square.second img{
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    position: relative;
+    top: 138.39px;
+}
+.square.third{
+    background-color: white;
+    top: 700px;
+    left: 700px;
+    z-index: 2;
+
+    padding: 34px;
+    border-top: 2px solid #2137FC;
+    border-bottom: 2px solid #2137FC;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.square.third div{
+    background-color: #FFCE22;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 0;
+}
+
+#secondGlyph{
+    display: block;
+    margin: 0 auto;
+    width: 358.441px;
+    position: relative;
+    bottom: 23px;
+}
