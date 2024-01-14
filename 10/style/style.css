@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;700&family=IBM+Plex+Sans:wght@400;600&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(0, 161, 198, 0.05);
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+p{
+    margin: 0;
+}
+.container{
+    width: 1240px;
+    margin: 0 auto;
+}
+h1{
+    color: #2D3640;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80px; /* 166.667% */
+    letter-spacing: -0.5px;
+
+    margin: 142px 0 10px 0;
+}
+h1 strong{
+    font-weight: 600;
+}
+.introText{
+    color: #2B292D;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+
+    width: 695px;
+    margin: 10px 0 50px 0;
+}
+.developersContainer{
+    font-family: 'Catamaran', sans-serif;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.developer{
+    width: 295px;
+    height: 470px;
+    background-color: #FFF;
+    border: 1px solid #EAEDF2;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 10px rgba(45, 54, 64, 0.05));
+
+    float: left;
+    margin: 40px 10px;
+}
+.developer:first-of-type{
+    margin-left: 0;
+}
+.developer:last-of-type{
+    margin-right: 0;
+}
+.photoContainer{
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #EFF3F8;
+    border: 2.86px solid #EFF3F8;
+    margin: 56px auto 24px auto;
+    overflow: hidden;
+}
+.photoContainer img{
+    display: block;
+    height: auto;
+    position: relative;
+}
+.developerData{
+    text-align: center;
+}
+.developerData h3{
+    color: #2D3640;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.625px;
+    margin: 0 0 -4px 0;
+}
+.developerData p{
+    color: #4B4F52;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.skillLogo{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 33px 7.5px;
+    line-height: 50px;
+}
+.skillLogo img{
+    display: inline-block;
+    vertical-align: middle;
+}
+.VueJS{
+    background-color: #41B883;
+}
+.Angular{
+    background-color: #34474F;
+}
+.Flutter{
+    background-color: #202124;
+}
+.ReactJS{
+    background-color: #61DAFB;
+}
+.Java{
+    background-color: #D63033;
+}
+.Html{
+    background-color: #E44E25;
+}
+.Css{
+    background-color: #1073BB;
+}
