@@ -1,0 +1,334 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;500;600&display=swap');
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+
+    padding-top: 43px;
+}
+h1, h2, h3, h5{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+h2{
+    font-size: 60px;
+    letter-spacing: -0.05em;
+}
+h3{
+    font-size: 40px;
+}
+h5{
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.main-container{
+    padding: 0 24px;
+}
+
+/* header */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 32px;
+}
+.menu-button-container, .controls{
+    width: 100%;
+    flex-shrink: 1;
+}
+.full-menu{
+    display: none;
+
+    font-size: 24px;
+    line-height: 28px;
+}
+button{
+    display: inline-block;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 21px;
+}
+.menu-button-container{
+    text-align: left;
+}
+.logo{
+    background-color: #000;
+    width: 163px;
+    height: 42px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: -0.05em;
+    color: #fff;
+    line-height: 42px;
+    flex-shrink: 0;
+}
+.controls{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.basket>img{
+    display: block;
+    margin-left: 24px;
+    height: 26px;
+    width: auto;
+}
+
+
+/* intro and subscripton section */
+.shoes-image{
+    width: 100%;
+    height: 354px;
+    margin: 27px 0;
+    text-align: center;
+
+    background-image: url(../img-shoppy/shoes-image.svg);
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+.beginning-section h2, .subscribe-section h3{
+    width: 65%;
+    margin: 0  auto;
+}
+.intro-text, .subscribe-text{
+    width: 80%;
+    margin: 23px auto 34px;
+}
+.subscribe-section{
+    padding: 85px 0;
+}
+.subscribe-section h3{
+    font-size: 40px;
+}
+.subscribe-section button{
+    text-transform: uppercase;
+    padding: 10px 35px;
+    border: 2px solid #000;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+}
+.subscribe-section button:hover{
+    background-color: #ddd;
+}
+.shop-now-button{
+    text-transform: uppercase;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+
+    background-color: #000;
+    color: #fff;
+    padding: 11px 40px;
+    border-radius: 15px;
+
+    display: block;
+    margin: 34px auto 40px;
+}
+.shop-now-button:hover{
+    background-color: #444;
+}
+
+
+/* categories */
+.categories{
+    display: flex;
+    flex-direction: column;
+}
+.category{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 342px;
+    height: 342px;
+    margin: 12px auto;
+    padding: 25px 10px 25px 20px;
+    background-size: cover;
+    text-decoration: none;
+}
+.category h3{
+    display: block;
+    align-self: flex-start;
+    color: #fff;
+}
+.women-category span{
+    display: block;
+    align-self: flex-end;
+    color: #000;
+}
+.men-category span{
+    display: block;
+    align-self: flex-start;
+    color: #fff;
+}
+.women-category{
+    background-image: url(../img-shoppy/women-shoes.png);
+}
+.men-category{
+    background-image: url(../img-shoppy/men-shoes.png);
+}
+
+/* selected items */
+.selected-items{
+    margin: 15px 0 0 24px;
+    text-align: left;
+}
+.selected-items>h3{
+    margin: 30px 0 10px 0;
+}
+.selected-items-list{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.selected-items-list>div{
+    margin-right: 16px;
+    padding-bottom: 15px;
+}
+.selected-items-list img{
+    width: 252px;
+    height: 252px;
+    object-fit: cover;
+    margin-bottom: 3px;
+}
+
+
+/* footer */
+footer{
+    background-color: #000;
+    padding: 10px 24px 12px;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: left;
+}
+.footer-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer h4{
+    color: #C4C4C4;
+    opacity: 50%;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+}
+footer a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.footer-block{
+    width: 162px;
+    padding-top: 30px;
+}
+.social-media{
+    color: #000;
+}
+.social-media div{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+    margin-right: 13px;
+}
+.social-media div:last-child{
+    margin-right: 0;
+}
+.rights{
+    color: #fff;
+    font-size: 12px;
+    opacity: 40%;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+@media (min-width: 1200px){
+    /* header */
+    .menu-button{
+        display: none;
+    }
+    .full-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        max-width: 650px;
+    }
+    .full-menu a{
+        display: block;
+        color: #000;
+        text-decoration: none;
+        padding-right: 25px;
+    }
+
+    /* intro */
+    .beginning-section{
+        display: flex;
+        align-items: flex-end;
+        margin: 40px 24px;
+    }
+    .shoes-image{
+        order: 2;
+        width: 70%;
+        background-image: url(../img-shoppy/shoes-image-big.svg);
+        background-size: auto 100%;
+    }
+    .beginning-text{
+        width: 30%;
+        text-align: left;
+    }
+    .beginning-text h2, .beginning-text p, .shop-now-button{
+        margin-left: 0;
+    }
+
+    /* categories */
+    .categories{
+        flex-direction: row;
+        margin: 50px 16px;
+    }
+    .category{
+        width: 50%;
+        margin: 8px;
+        background-position: center;
+    }
+
+    /* selected-items and subscribe-section */
+    .selected-items h3{
+        margin-bottom: 30px;
+    }
+    .subscribe-section{
+        width: 390px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* footer */
+    .footer-section{
+        justify-content: space-between;
+    }
+    .footer-block{
+        flex-grow: 1;
+    }
+    .social-media{
+        flex-grow: 4;
+        padding-left: 20%;
+    }
+}
