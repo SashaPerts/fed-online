@@ -146,7 +146,7 @@ button{
 /* categories */
 .categories{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 .category{
     display: flex;
@@ -301,7 +301,7 @@ footer a{
 
     /* categories */
     .categories{
-        flex-direction: row;
+        flex-wrap: nowrap;
         margin: 50px 16px;
     }
     .category{
