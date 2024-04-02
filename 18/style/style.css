@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+html, body, input, button{
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+html, body{
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #767676;
+}
+.main-container{
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
+/* nav and header */
+header{
+    padding: 14px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #BC436A;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+.menu a{
+    color: #776677;
+    text-decoration: none;
+    display: block;
+    margin: 14px 20px;
+}
+.menu>nav{
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav>.active{
+    color: #BC436A;
+}
+.book-button{
+    display: inline-block;
+    background-color: #386E41;
+    color: #fff;
+    padding: 8px;
+    margin-left: 20px;
+    border-radius: 4px;
+    border: none;
+}
+.book-button:hover{
+    opacity: 0.8;
+}
+
+
+/* intro-section */
+.intro-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+
+    min-height: 55vh;
+    padding-right: 45vw;
+    /* width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible; */
+}
+.intro-section::before{
+    content: "";
+    display: block;
+    width: 8vw;
+    height: 12vh;
+    border: 10px solid #386E41;
+    position: absolute;
+    left: -5vw;
+    bottom: 10%;
+}
+.intro-photo{
+    background-image: url(../img/traveler-circle.jpg);
+    background-position: center;
+    background-size: cover;
+
+    max-width: 812px;
+    max-height: 812px;
+    width: 50vw;
+    height: 50vw;
+    max-width: 85vh;
+    max-height: 85vh;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -6vw;
+    z-index: -1;
+}
+h2{
+    font-size: 3vw;
+    font-weight: 600;
+    line-height: 4vw;
+}
+h2 strong{
+    color: #BC436A;
+    text-transform: uppercase;
+}
+.intro-section p{
+    font-size: 1.1rem;
+    padding-right: 20px;
+}
+.destinations{
+    margin-bottom: 3vh;
+}
+.destinations .fa-chevron-right{
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+/* form-container */
+.form-container form{
+    background-color: #386E41;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+}
+.form-container input, .form-container button{
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+.input-box, .input-submit{
+    border-bottom: 1px solid #fff;
+    margin: 30px;
+    padding-bottom: 8px;
+    width: 250px;
+}
+.form-container .input-submit{
+    display: block;
+    border: none;
+    padding: 8px 21px;
+    background-color: #BC436A;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 150px;
+}
+@media (max-width: 1400px){
+    .form-container .input-submit{
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+}
+.input-box{
+    display: flex;
+    justify-content: space-between;
+}
+.input-box input::placeholder{
+    color: #fff;
+}
+
+footer{
+    min-height: 10vh;
+    padding: 3vh 0 0 0;
+    text-align: center;
+    line-height: 35px;
+}
+
+
+@media (max-width: 900px){
+    html, body, input, button{
+        font-size: 14px;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .book-button{
+        display: block;
+        margin: 15px auto;
+    }
+    .intro-photo{
+        width: 60vw;
+        height: 60vw;
+        right: -25vw;
+    }
+    .intro-section{ 
+        min-height: 30vh;
+    }
+    h2{
+        font-size: 5vw;
+        line-height: 6vw;
+    }
+    .intro-section::before{
+        border-width: 8px;
+        left: -8vw;
+    }
+    .input-box, .input-submit{
+        margin: 25px;
+    }
+    .intro-section{
+        padding-right: 35vw;
+    }
+}
