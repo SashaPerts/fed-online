@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root{
+    --blue-color: #0F89FA;
+    --white-color: #fff;
+    --black-color: #000;
+    --button-height: 56px;
+    --green-color: #51B851;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+html, body, button{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--black-color);
+}
+.container{
+    width: 580px;
+    margin: 40px auto;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+button{
+    width: 104px;
+    height: var(--button-height);
+    margin: 40px 30px;
+    text-transform: capitalize;
+
+    color: var(--blue-color);
+    background-color: transparent;
+    border: 2px solid var(--blue-color);
+
+    transition: all 300ms ease-in;
+}
+
+
+/* first lane */
+.fill-in:hover{
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+.glowing{
+    transition-duration: 200ms;
+}
+.glowing:hover{
+    box-shadow: 0 0 8px 4px var(--blue-color);
+}
+
+.fill-up::before, .slide::before, .close::before, .close::after, .hover-me::before{           /*background for effects*/
+    content: "";
+    display: block;
+    background-color: var(--blue-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 300ms ease-in;
+}
+
+.fill-up{
+    position: relative;
+}
+.fill-up::before{
+    height: 0;
+}
+.fill-up:hover::before{
+    height: 100%;
+}
+.fill-up:hover{
+    color: var(--white-color);
+}
+
+
+/* second lane */
+.slide{
+    position: relative;
+}
+.slide::before{
+    width: 0;
+}
+.slide:hover::before{
+    width: 100%;
+}
+.slide:hover{
+    color: var(--white-color);
+}
+
+.raize:hover{
+    transform: translate(0, -5px);
+    box-shadow: 0 10px 10px -5px var(--blue-color);
+}
+
+.close{
+    position: relative;
+}
+.close::before{
+    width: 0;
+}
+.close::after{
+    left: unset;
+    right: 0;
+    width: 0;
+}
+.close:hover::before, .close:hover::after{
+    width: 50%;
+}
+.close:hover{
+    color: var(--white-color);
+}
+
+
+/* third lane */
+.notify-me{
+    background-color: var(--blue-color);
+    position: relative;
+    overflow: hidden;
+    color: var(--black-color);
+    transition: all 300ms ease-in-out;
+}
+.notify-me::before{
+    content: "Thanks";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    line-height: var(--button-height);
+    padding-bottom: 2rem;
+    transition: all 300ms ease-in-out;
+}
+.notify-me:hover{
+    color: transparent;
+    padding-top: 2rem;
+}
+.notify-me:hover::before{
+    color: var(--black-color);
+    height: 100%;
+    padding-bottom: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.hover-me{
+    transition-timing-function: ease-out;
+    position: relative;
+    background: linear-gradient(90deg, var(--white-color) 50%, var(--blue-color) 50%);
+    background-clip: text;
+    color: transparent;
+    border: none;
+}
+.hover-me::before{
+    background: linear-gradient(90deg, var(--blue-color) 50%, transparent 50%);
+    transition-timing-function: ease-out;
+}
+.hover-me, .hover-me::before{
+    background-size: 200%;
+    background-position: 50%;
+}
+.hover-me:hover, .hover-me:hover::before{
+    background-position: 0;
+}
+
+.zoom{
+    transform-origin: top left;
+    transform: scale(0.9);
+}
+.zoom:hover{
+    transform: scale(1);
+}
+
+/* fourth lane */
+.offset{
+    position: relative;
+}
+.offset::before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    transition: all 300ms ease-in;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.offset, .offset::before{
+    background-color: transparent;
+    border: 4px solid var(--blue-color);
+}
+.offset:hover{
+    translate: 4px 4px;
+    color: var(--white-color);
+    background-color: var(--blue-color);
+}
+.offset:hover::before{
+    top: -4px;
+    left: -4px;
+}
+
+.explore-more{
+    transition-timing-function: ease-out;
+    width: 143px;
+    padding-left: 20px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    border-width: 1px;
+}
+.explore-more i{
+    color: transparent;
+    padding-left: 0.5em;
+    transition-timing-function: ease-out;
+}
+.explore-more:hover{
+    width: 169px;
+    margin-right: 4px;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+.explore-more:hover i{
+    color: var(--white-color);
+}
+
+.fancy-button{
+    transition-timing-function: ease-out;
+    width: auto;
+    padding: 0 20px;
+    border-width: 1px;
+    position: relative;
+}
+.fancy-button::before, .fancy-button::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: 1px solid var(--blue-color);
+    border-bottom: 1px solid var(--blue-color);
+    top: -4px;
+    bottom: -4px;
+    width: 50%;
+    z-index: -1;
+    transition: all 300ms ease-out;
+}
+.fancy-button::before{
+    left: 4px;
+    border-left: 1px solid var(--blue-color);
+}
+.fancy-button::after{
+    right: 4px;
+    border-right: 1px solid var(--blue-color);
+}
+.fancy-button:hover::before, .fancy-button:hover::after{
+    width: 0;
+    border-color: transparent;
+}
+.fancy-button:hover{
+    translate: 0 2px;
+}
+
+/* fifth lane */
+.circle-hover-me{
+    transition-timing-function: ease-out;
+    border: none;
+    position: relative;
+    color: var(--white-color);
+}
+.circle-hover-me::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--blue-color);
+    border-radius: 50vmax;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--button-height);
+    z-index: -1;
+    transition: all 300ms ease-out;
+}
+.circle-hover-me:hover::before{
+    width: 100%;
+}
+
+
+.square-explore-more{
+    color: var(--white-color);
+    border: none;
+    position: relative;
+    padding: 0 20px;
+    width: auto;
+}
+.square-explore-more::before, .square-explore-more::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transition: all 300ms ease-out;
+}
+.square-explore-more::before{
+    background-color: var(--green-color);
+    clip-path: polygon(0% 0%, 50% 0%, 60% 75%, 0% 75%);
+}
+.square-explore-more::after{
+    background-color: var(--blue-color);
+    clip-path: polygon(100% 100%, 50% 100%, 40% 25%, 100% 25%);
+}
+.square-explore-more:hover::before{
+    clip-path: polygon(100% 0%, 50% 0%, 50% 100%, 100% 100%);
+}
+.square-explore-more:hover::after{
+    clip-path: polygon(0% 100%, 50% 100%, 50% 0%, 0% 0%);
+}
