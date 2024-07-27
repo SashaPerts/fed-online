@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Shadows+Into+Light&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+html, body, button{
+    font-family: "Lora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+h1, h2{
+    font-family: "Shadows Into Light", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header, .section-button, .arrow-to-top{
+    background-color: #668E68;
+}
+
+.top-bg-section{
+    background-image: url(../img/coffee1.png);
+    min-height: 512px;
+}
+.top-bg-section h1{
+    color: #FFF;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.70);
+    font-size: 6.875rem;
+}
+.menu .rounded-circle{
+    border: 9px solid #81613B;
+}
+.bottom-bg-section{
+    background-image: url(../img/cafe1.png);
+    min-height: 600px;
+}
+.news-section{
+    background-color: #81613B33;
+}
+.news-box{
+    border: 1px solid #668E68;
+}
+footer{
+    min-height: 180px;
+}
+.arrow-to-top{
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+}
+.navbar-collapse{
+    color: #FFF;
+}
+.navbar-collapse.show{
+    display: flex;
+    position: relative;
+}
+.navbar-collapse.show ul{
+    background-color: #FFF;
+    width: 225px;
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+}
+.navbar-collapse.show a, .navbar-collapse.show .active{
+    text-align: center;
+    color: #668E68;
+}
+
+.navbar-toggler>.menu-icon{
+    display: inline;
+}
+.navbar-toggler>.menu-x-icon{
+    display: none;
+}
+.navbar-toggler[aria-expanded="true"]>.menu-icon{
+    display: none;
+}
+.navbar-toggler[aria-expanded="true"]>.menu-x-icon{
+    display: inline;
+}
+
+.food-image{
+    top: 0;
+    left: -5px;
+    width: 105%;
+}
