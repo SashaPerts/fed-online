@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url("../img/background.jpg");
+    background-image: url("./img/background.jpg");
     background-position: top center;
     background-color: #111;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@ img{
     height: 74px;
     border-radius: 50%;
     border: none;
-    background-image: url("../img/userPhoto.jpg");
+    background-image: url("./img/userPhoto.jpg");
     background-size: contain;
     background-position: center;
 }
@@ -215,11 +215,11 @@ img{
 .popular-items div:last-child{
     margin-right: 0;
 }
-#film1{ background-image: url("../img/film1.jpg"); }
-#film2{ background-image: url("../img/film2.jpg"); }
-#film3{ background-image: url("../img/film3.jpg"); }
-#film4{ background-image: url("../img/film4.jpg"); }
-#film5{ background-image: url("../img/film5.jpg"); }
+#film1{ background-image: url("./img/film1.jpg"); }
+#film2{ background-image: url("./img/film2.jpg"); }
+#film3{ background-image: url("./img/film3.jpg"); }
+#film4{ background-image: url("./img/film4.jpg"); }
+#film5{ background-image: url("./img/film5.jpg"); }
 
 .age-rating{
     width: 174px;
