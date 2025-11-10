@@ -20,7 +20,7 @@ header, .section-button, .arrow-to-top{
 }
 
 .top-bg-section{
-    background-image: url(../img/coffee1.png);
+    background-image: url(./img/coffee1.png);
     min-height: 512px;
 }
 .top-bg-section h1{
@@ -32,7 +32,7 @@ header, .section-button, .arrow-to-top{
     border: 9px solid #81613B;
 }
 .bottom-bg-section{
-    background-image: url(../img/cafe1.png);
+    background-image: url(./img/cafe1.png);
     min-height: 600px;
 }
 .news-section{
