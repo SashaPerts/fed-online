@@ -90,7 +90,7 @@ nav>.active{
     bottom: 10%;
 }
 .intro-photo{
-    background-image: url(../img/traveler-circle.jpg);
+    background-image: url(./img/traveler-circle.jpg);
     background-position: center;
     background-size: cover;
 
