@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+}
+body, input, button{
+    font-family: "Open Sans", sans-serif;
+}
+.container{
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    width: fit-content;
+    min-width: 400px;
+    box-shadow: 2px 2px 5px grey;
+}
+.form-login h2{
+    text-align: center;
+    font-weight: bolder;
+    padding: 0;
+    margin: 0.5em;
+}
+.form-field-container{
+    padding: 0;
+    margin: 0 0 0.6rem;
+}
+.form-login label{
+    display: block;
+    color: gray;
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+.form-login label:has(+input:focus-visible){
+    color:rgb(0, 98, 255);
+}
+.form-login input{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    transition: all 0.25s;
+}
+
+.form-login small{
+    color: palevioletred;
+    visibility: hidden;
+    display: block;
+    padding: 6px 0;
+}
+.form-login button{
+    background-color: cornflowerblue;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* form validation */
+.form-field-container.success input{
+    border-color: green;
+    background-color: honeydew;
+}
+.form-field-container.error input{
+    border-color: red;
+}
+.form-field-container.error small{
+    visibility: visible;
+}
+
+
+
+.form-login input:focus-visible{
+    outline: 0;
+    border-color: blue;
+    box-shadow: 2px 1px 3px lightblue;
+}

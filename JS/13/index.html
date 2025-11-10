@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather today</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <th>City</th><th>min T</th><th>max T</th><th>sunrize</th><th>sunset</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.addEventListener("readystatechange", function() {
+            if(xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300){
+                let loadedPlaces = JSON.parse(xhr.responseText);
+                // console.log(loadedPlaces);
+                for(let place of loadedPlaces){
+                    addLine(getCity(place.latitude, place.longitude),
+                        place.daily.temperature_2m_min[0],
+                        place.daily.temperature_2m_max[0],
+                        place.daily.sunrise[0].slice(-5),
+                        place.daily.sunset[0].slice(-5)
+                    );
+                }
+            }
+        });
+        xhr.open("GET", "https://api.open-meteo.com/v1/forecast?latitude=51.5085,48.8534,59.3294&longitude=-0.1257,2.3488,18.0687&daily=temperature_2m_min,temperature_2m_max,sunrise,sunset,rain_sum&timezone=GMT&forecast_days=1");
+        xhr.send();
+
+        const cities = [
+            ["London", 51.5, -0.1],
+            ["Paris", 48.9, 2.3],
+            ["Stockholm", 59.3, 18.1]
+        ];
+        function getCity(latitude, longitude){
+            for(let i = 0; i < cities.length; i++){
+                if(Math.abs(cities[i][1] - latitude) < 0.1 && Math.abs(cities[i][2] - longitude) < 0.1){
+                    return cities[i][0];
+                }
+            }
+            return (latitude + "; " + longitude);
+        }
+        function addLine(city, tMin, tMax, sunrize, sunset){
+            let row = document.createElement("tr");
+            for(let i = 0; i < arguments.length; i++){
+                let cell = document.createElement("td");
+                cell.innerText = arguments[i];
+                row.appendChild(cell);
+            }
+            document.querySelector("table").appendChild(row);
+        }
+    </script>
+</body>
+</html>
