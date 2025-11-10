@@ -93,7 +93,7 @@ button{
     margin: 27px 0;
     text-align: center;
 
-    background-image: url(../img-shoppy/shoes-image.svg);
+    background-image: url(./img-shoppy/shoes-image.svg);
     background-position: center;
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -176,10 +176,10 @@ button{
     color: #fff;
 }
 .women-category{
-    background-image: url(../img-shoppy/women-shoes.png);
+    background-image: url(./img-shoppy/women-shoes.png);
 }
 .men-category{
-    background-image: url(../img-shoppy/men-shoes.png);
+    background-image: url(./img-shoppy/men-shoes.png);
 }
 
 /* selected items */
@@ -288,7 +288,7 @@ footer a{
     .shoes-image{
         order: 2;
         width: 70%;
-        background-image: url(../img-shoppy/shoes-image-big.svg);
+        background-image: url(./img-shoppy/shoes-image-big.svg);
         background-size: auto 100%;
     }
     .beginning-text{
